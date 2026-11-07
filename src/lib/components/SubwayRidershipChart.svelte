@@ -3,7 +3,7 @@
 
   `progress` (0 -> 1) controls what is drawn, so a scroll story can scrub it.
   The order and length of each step (including pauses) is set in
-  #lib/subwayStoryTimeline.js. With the default progress = 1 the full chart is shown.
+  #lib/storyTimeline.js. With the default progress = 1 the full chart is shown.
 
   Data: FTA National Transit Database, "Complete Monthly Ridership (with
   adjustments and estimates)", September 2026 release, UPT sheet.
@@ -11,7 +11,8 @@
 -->
 <script>
 	import defaultData from '#lib/data/subway_monthly_ridership.json';
-	import { stepRange } from '#lib/subwayStoryTimeline.js';
+	import { stepRange } from '#lib/storyTimeline.js';
+	import { inRangeMonth, RANGE_START_INDEX, RANGE_END_INDEX } from '#lib/storyRange.js';
 
 	/**
 	 * @type {{
@@ -36,10 +37,12 @@
 	const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 	const points = $derived(
-		data.map((d) => {
-			const [y, m] = d.date.split('-').map(Number);
-			return { year: y, month: m, t: y * 12 + (m - 1), upt: d.upt };
-		})
+		data
+			.filter((d) => inRangeMonth(d.date))
+			.map((d) => {
+				const [y, m] = d.date.split('-').map(Number);
+				return { year: y, month: m, t: y * 12 + (m - 1), upt: d.upt };
+			})
 	);
 
 	const mean = (arr) => arr.reduce((s, v) => s + v, 0) / arr.length;
@@ -95,7 +98,7 @@
 	const innerH = $derived(height - margin.top - margin.bottom);
 
 	const yMax = $derived(Math.ceil(Math.max(...points.map((p) => p.upt)) / 50e6) * 50e6);
-	const x = (t) => ((t - tMin) / (tMax - tMin)) * innerW;
+	const x = (t) => ((t - RANGE_START_INDEX) / (RANGE_END_INDEX - RANGE_START_INDEX)) * innerW;
 	const y = (v) => innerH - (v / yMax) * innerH;
 
 	const yTicks = $derived(Array.from({ length: yMax / 50e6 + 1 }, (_, i) => i * 50e6));
@@ -114,7 +117,7 @@
 
 	function onPointerMove(e) {
 		const rect = e.currentTarget.getBoundingClientRect();
-		const t = tMin + ((e.clientX - rect.left) / innerW) * (tMax - tMin);
+		const t = RANGE_START_INDEX + ((e.clientX - rect.left) / innerW) * (RANGE_END_INDEX - RANGE_START_INDEX);
 		active = Math.round(t - tMin);
 		if (active > maxIndex) active = null;
 	}

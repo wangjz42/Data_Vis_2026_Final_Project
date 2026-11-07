@@ -1,9 +1,9 @@
 <script>
-	import SubwayRidershipStory from '#lib/components/SubwayRidershipStory.svelte';
+	import ScrollStory from '#lib/components/ScrollStory.svelte';
 </script>
 
 <main>
-	<SubwayRidershipStory />
+	<ScrollStory />
 </main>
 
 <style>

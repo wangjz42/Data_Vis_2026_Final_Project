@@ -1,0 +1,174 @@
+[
+ {
+  "quarter": "2016-Q1",
+  "rent": 86.08
+ },
+ {
+  "quarter": "2016-Q2",
+  "rent": 86.46
+ },
+ {
+  "quarter": "2016-Q3",
+  "rent": 86.24
+ },
+ {
+  "quarter": "2016-Q4",
+  "rent": 86.4
+ },
+ {
+  "quarter": "2017-Q1",
+  "rent": 85.36
+ },
+ {
+  "quarter": "2017-Q2",
+  "rent": 84.23
+ },
+ {
+  "quarter": "2017-Q3",
+  "rent": 84.88
+ },
+ {
+  "quarter": "2017-Q4",
+  "rent": 84.35
+ },
+ {
+  "quarter": "2018-Q1",
+  "rent": 83.67
+ },
+ {
+  "quarter": "2018-Q2",
+  "rent": 83.76
+ },
+ {
+  "quarter": "2018-Q3",
+  "rent": 83.27
+ },
+ {
+  "quarter": "2018-Q4",
+  "rent": 83.05
+ },
+ {
+  "quarter": "2019-Q1",
+  "rent": 83.47
+ },
+ {
+  "quarter": "2019-Q2",
+  "rent": 81.31
+ },
+ {
+  "quarter": "2019-Q3",
+  "rent": 82.4
+ },
+ {
+  "quarter": "2019-Q4",
+  "rent": 81.25
+ },
+ {
+  "quarter": "2020-Q1",
+  "rent": 81.39
+ },
+ {
+  "quarter": "2020-Q2",
+  "rent": 82.25
+ },
+ {
+  "quarter": "2020-Q3",
+  "rent": 78.59
+ },
+ {
+  "quarter": "2020-Q4",
+  "rent": 76.04
+ },
+ {
+  "quarter": "2021-Q1",
+  "rent": 72.29
+ },
+ {
+  "quarter": "2021-Q2",
+  "rent": 70.57
+ },
+ {
+  "quarter": "2021-Q3",
+  "rent": 69.01
+ },
+ {
+  "quarter": "2021-Q4",
+  "rent": 66.56
+ },
+ {
+  "quarter": "2022-Q1",
+  "rent": 65.17
+ },
+ {
+  "quarter": "2022-Q2",
+  "rent": 63.75
+ },
+ {
+  "quarter": "2022-Q3",
+  "rent": 63.94
+ },
+ {
+  "quarter": "2022-Q4",
+  "rent": 62.82
+ },
+ {
+  "quarter": "2023-Q1",
+  "rent": 62.23
+ },
+ {
+  "quarter": "2023-Q2",
+  "rent": 61.74
+ },
+ {
+  "quarter": "2023-Q3",
+  "rent": 59.13
+ },
+ {
+  "quarter": "2023-Q4",
+  "rent": 57.58
+ },
+ {
+  "quarter": "2024-Q1",
+  "rent": 56.4
+ },
+ {
+  "quarter": "2024-Q2",
+  "rent": 55.65
+ },
+ {
+  "quarter": "2024-Q3",
+  "rent": 55.86
+ },
+ {
+  "quarter": "2024-Q4",
+  "rent": 56.17
+ },
+ {
+  "quarter": "2025-Q1",
+  "rent": 55.19
+ },
+ {
+  "quarter": "2025-Q2",
+  "rent": 55.44
+ },
+ {
+  "quarter": "2025-Q3",
+  "rent": 54.58
+ },
+ {
+  "quarter": "2025-Q4",
+  "rent": 54.03
+ },
+ {
+  "quarter": "2026-Q1",
+  "rent": 51.96
+ },
+ {
+  "quarter": "2026-Q2",
+  "rent": 52.35
+ },
+ {
+  "quarter": "2026-Q3",
+  "rent": 52.51
+ }
+]
